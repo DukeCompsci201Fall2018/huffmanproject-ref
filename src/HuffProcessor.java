@@ -293,8 +293,6 @@ public class HuffProcessor {
             	int info = current.myValue;            	
             	if (info == PSEUDO_EOF)
             		return;
-            	System.out.println(info);
-            	out.writeBits(32, 111111111);
             	out.writeBits(BITS_PER_WORD, info);
             	current = root;
             }

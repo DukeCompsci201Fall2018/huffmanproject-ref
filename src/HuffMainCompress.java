@@ -14,6 +14,7 @@ public class HuffMainCompress {
 		BitOutputStream bos = new BitOutputStream(outf);
 		HuffProcessor hp = new HuffProcessor();
 		hp.compress(bis, bos);
+		bos.flush();  // added by Charles
 		System.out.printf("compress from %s to %s\n", 
 		                   inf.getName(),outf.getName());
 		System.out.printf("file: %d bits to %d bits\n",inf.length()*8,outf.length()*8);
